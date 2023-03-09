@@ -5,7 +5,7 @@ use crate::field_attributes::DefaultBehavior;
 use crate::fq_std::{FQAny, FQClone, FQDefault, FQOption};
 use crate::utility::ident_or_index;
 use crate::{ReflectMeta, ReflectStruct};
-use crate::utility::WhereClauseOptions;
+use crate::utility::{ident_or_index, extend_where_clause};
 use proc_macro::TokenStream;
 use proc_macro2::Span;
 use quote::{quote, ToTokens};
