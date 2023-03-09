@@ -131,9 +131,7 @@ pub(crate) fn extend_where_clause(
     };
     generic_where_clause.extend(quote! {
         #(#active_types: #active_trait_bounds,)*
-        core::hash::Hash,
         #(#ignored_types: #ignored_trait_bounds,)*
-        core::hash::Hash,
     });
     generic_where_clause
 }
