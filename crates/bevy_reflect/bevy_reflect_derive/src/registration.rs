@@ -17,7 +17,7 @@ pub(crate) fn impl_get_type_registration(
     serialization_denylist: Option<&BitSet<u32>>,
 ) -> proc_macro2::TokenStream {
     let (impl_generics, ty_generics, where_clause) = generics.split_for_impl();
-    /*
+    
     let serialization_data = serialization_denylist.map(|denylist| {
         let denylist = denylist.into_iter();
         quote! {
@@ -25,7 +25,6 @@ pub(crate) fn impl_get_type_registration(
             registration.insert::<#bevy_reflect_path::serde::SerializationData>(#bevy_reflect_path::serde::SerializationData::new(ignored_indices));
         }
     });
-    */
     let where_reflect_clause = extend_where_clause(where_clause, where_clause_options);
 
     quote! {
