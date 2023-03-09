@@ -125,7 +125,7 @@ pub(crate) fn extend_where_clause(
     let mut generic_where_clause = if where_clause.is_some() {
         quote! {#where_clause}
     } else if !(active_types.is_empty() && ignored_types.is_empty()) {
-        quote! {where,}
+        quote! {where}
     } else {
         quote! {}
     };
