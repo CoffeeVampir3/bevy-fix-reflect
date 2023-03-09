@@ -130,8 +130,8 @@ pub(crate) fn extend_where_clause(
         quote! {}
     };
     generic_where_clause.extend(quote! {
-        #(#active_types: #active_trait_bounds,)*
-        #(#ignored_types: #ignored_trait_bounds,)*
+        #(#active_types: #active_trait_bounds,,)*
+        #(#ignored_types: #ignored_trait_bounds,,)*
     });
     generic_where_clause
 }
