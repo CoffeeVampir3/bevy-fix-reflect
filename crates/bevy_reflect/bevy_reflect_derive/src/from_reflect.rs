@@ -5,11 +5,11 @@ use crate::field_attributes::DefaultBehavior;
 use crate::fq_std::{FQAny, FQClone, FQDefault, FQOption};
 use crate::utility::ident_or_index;
 use crate::{ReflectMeta, ReflectStruct};
+use crate::utility::WhereClauseOptions;
 use proc_macro::TokenStream;
 use proc_macro2::Span;
 use quote::{quote, ToTokens};
 use syn::{Field, Ident, Lit, LitInt, LitStr, Member};
-use utility::WhereClauseOptions;
 
 /// Implements `FromReflect` for the given struct
 pub(crate) fn impl_struct(reflect_struct: &ReflectStruct) -> TokenStream {
